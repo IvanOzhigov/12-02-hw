@@ -52,6 +52,34 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 ![alt text](https://github.com/IvanOzhigov/12-02-hw/blob/main/1-3.png)
 ![alt text](https://github.com/IvanOzhigov/12-02-hw/blob/main/1-4.png)
 ![alt text](https://github.com/IvanOzhigov/12-02-hw/blob/main/1-5.png)
+```
+apt update
+apt-get install mysql-server
+mysql_secure_installation
+mysql -u root -p
+mysql> CREATE USER 'sys_test'@'localhost' IDENTIFIED BY 'password';
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+GRANT ALL PRIVILEGES ON *.* TO 'sys_test'@'localhost';
+show grants for 'sys_test'@'localhost';
+exit
+mysql -u sys_test -p
+SELECT user();
+exit
+wget https://downloads.mysql.com/docs/sakila-db.zip
+apt install unzip
+unzip sakila-db.zip
+mysql -u sys_test -p
+CREATE DATABASE sakila;
+SHOW DATABASES;
+exit
+export DBNAME=sakila
+mysql -u sys_test -p ${DBNAME} < /home/ivanozhigov/sakila-db/sakila-schema.sql
+mysql -u sys_test -p ${DBNAME} < /home/ivanozhigov/sakila-db/sakila-data.sql
+mysql -u sys_test -p
+SHOW DATABASES;
+USE sakila;
+SHOW TABLES;
+```
 
 ### Задание 2
 Составьте таблицу, используя любой текстовый редактор или Excel, в которой должно быть два столбца: в первом должны быть названия таблиц восстановленной базы, во втором названия первичных ключей этих таблиц. Пример: (скриншот/текст)
