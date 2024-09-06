@@ -47,6 +47,12 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 
 ## Ответ
 
+![alt text](https://github.com/IvanOzhigov/12-02-hw/blob/main/1-1.png)
+![alt text](https://github.com/IvanOzhigov/12-02-hw/blob/main/1-2.png)
+![alt text](https://github.com/IvanOzhigov/12-02-hw/blob/main/1-3.png)
+![alt text](https://github.com/IvanOzhigov/12-02-hw/blob/main/1-4.png)
+![alt text](https://github.com/IvanOzhigov/12-02-hw/blob/main/1-5.png)
+
 ### Задание 2
 Составьте таблицу, используя любой текстовый редактор или Excel, в которой должно быть два столбца: в первом должны быть названия таблиц восстановленной базы, во втором названия первичных ключей этих таблиц. Пример: (скриншот/текст)
 ```
@@ -55,6 +61,7 @@ customer         | customer_id
 ```
 
 ## Ответ
+![alt text](https://github.com/IvanOzhigov/12-02-hw/blob/main/2-1.png)
 
 ```
 Название таблицы             | Название первичного ключа
